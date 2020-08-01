@@ -1,0 +1,30 @@
+.Pagination {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 5;
+  right: 25px;
+  top: 50vh;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.Pagination__dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
+}
+.Pagination__dot:not(:first-child) {
+  margin-top: 10px;
+}
+.Pagination__dot-active {
+  background-color: #f78b1f;
+}
+/*# sourceMappingURL=pagination.css.map */

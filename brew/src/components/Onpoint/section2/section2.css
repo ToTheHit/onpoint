@@ -1,0 +1,39 @@
+.Section2__ice img {
+  height: 100%;
+}
+.Section2__ice-1 {
+  width: 41px;
+  height: 38px;
+  x: 82px;
+  y: 161px;
+}
+.Section2__ice-2 {
+  width: 103px;
+  height: 102px;
+  x: 232px;
+  y: 443px;
+}
+.Section2__ice-3 {
+  width: 97px;
+  height: 98px;
+  x: 701px;
+  y: 573px;
+}
+.Section2__ice-4 {
+  width: 221px;
+  height: 218px;
+  x: 870px;
+  y: 27px;
+}
+.Section2__iceText {
+  color: white;
+  width: 490px;
+  height: 113px;
+  font-family: "Gotham Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  text-align: center;
+  -webkit-transform: translate(280px, 250px);
+          transform: translate(280px, 250px);
+}
+/*# sourceMappingURL=section2.css.map */

@@ -6,7 +6,7 @@ import Page404 from "./Pages/Page404/Page404";
 
 
 const App = lazy(() => import('./Pages/Main/App'))
-const Bicycle = lazy(() => import('./Pages/Bicycle/Bicycle'));
+const Onpoint = lazy(() => import('./Pages/Onpoint/Onpoint'));
 
 const ScrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'instant' });
@@ -14,7 +14,7 @@ const ScrollToTop = () => {
 };
 
 const routes = [
-  { path: '/bicycle', Component: Bicycle },
+  // { path: '/', Component: '' },
 ]
 
 class AppRouter extends Component {
@@ -25,7 +25,7 @@ class AppRouter extends Component {
           <Route component={ScrollToTop} />
           <Switch>
             <Route exact path={'/'}>
-                <App />
+                <Onpoint />
             </Route>
 
             {routes.map(({ path }) => {

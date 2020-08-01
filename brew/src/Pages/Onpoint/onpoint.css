@@ -1,0 +1,33 @@
+.Onpoint {
+  position: relative;
+  --n: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  height: calc(var(--n) * 100vh);
+  -webkit-transform: translateY(calc(var(--i, 0) / var(--n) * -100%));
+          transform: translateY(calc(var(--i, 0) / var(--n) * -100%));
+  background-size: cover;
+}
+.Onpoint section {
+  width: 100%;
+  width: 100vw;
+  height: 100%;
+  height: calc(100% / var(--n));
+  position: relative;
+}
+.Background {
+  position: absolute;
+  width: 100%;
+  -webkit-transform: translateY(calc(var(--i, 0) / var(--n) * -100%));
+          transform: translateY(calc(var(--i, 0) / var(--n) * -100%));
+}
+/*# sourceMappingURL=onpoint.css.map */

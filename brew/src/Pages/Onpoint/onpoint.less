@@ -1,0 +1,28 @@
+.Onpoint {
+  position: relative;
+  --n: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  height: calc(var(--n) * 100vh);
+  transform: translateY(calc(var(--i, 0) / var(--n) * -100%));
+  background-size: cover;
+
+  section {
+    width: 100%;
+    width: 100vw;
+    height: 100%;
+    height: calc(100% / var(--n));
+    //background-color: #232498;
+    position: relative;
+  }
+}
+
+.Background {
+  position: absolute;
+  width: 100%;
+  transform: translateY(calc(var(--i, 0) / var(--n) * -100%));
+}
