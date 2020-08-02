@@ -1,0 +1,20 @@
+.Range {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 3;
+}
+.Range__anim {
+  -webkit-transition: width 0.5s linear 0s, -webkit-transform 0.5s linear 0s;
+  transition: width 0.5s linear 0s, -webkit-transform 0.5s linear 0s;
+  transition: transform 0.5s linear 0s, width 0.5s linear 0s;
+  transition: transform 0.5s linear 0s, width 0.5s linear 0s, -webkit-transform 0.5s linear 0s;
+}
+.Range__text {
+  color: white;
+  font-family: "Gotham Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+}
+/*# sourceMappingURL=range.css.map */

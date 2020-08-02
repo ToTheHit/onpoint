@@ -1,0 +1,182 @@
+.Section3 {
+
+  &__background {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+  &__wrapper {
+    position: relative;
+    --n1: 1;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%; // fallback
+    width: calc(var(--n1) * 100%) !important;
+    //height: 50vw;
+    max-height: 100vh;
+    transform: translate(calc(var(--i1) / var(--n1) * -100%));
+  }
+
+  &__item {
+    width: 100%; // fallback
+    width: calc(100% / var(--n1));
+    height: 100vh;
+
+    svg {
+      overflow: visible;
+    }
+  }
+
+  &__tab1 {
+    img {
+      height: 100%;
+    }
+
+    &__ice {
+      &-1 {
+        width: 230px;
+        height: 218px;
+        x: 14px;
+        y: 548px;
+        opacity: 0.5;
+      }
+
+      &-2 {
+        width: 107px;
+        height: 102px;
+        x: 665px;
+        y: 227px;
+        opacity: 0.5;
+      }
+
+      &-3 {
+        width: 38px;
+        height: 39px;
+        x: 911px;
+        y: 39px;
+        opacity: 0.5;
+      }
+    }
+
+    &__title {
+      font-family: "Gotham Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+      font-size: 30px;
+      line-height: 30px;
+      width: 370px;
+      height: 40px;
+      color: white;
+      x: 83px;
+      y: 112px;
+    }
+
+    &__content {
+      width: 578px;
+      height: 331px;
+      x: 242px;
+      y: 206px;
+    }
+  }
+
+  &__tab2 {
+    img {
+      height: 100%;
+    }
+
+    &__ice {
+      &-1 {
+        width: 107px;
+        height: 102px;
+        x: 45px;
+        y: 238px;
+        opacity: 0.5;
+      }
+
+      &-2 {
+        width: 39px;
+        height: 39px;
+        x: 473px;
+        y: 93px;
+        opacity: 0.5;
+      }
+
+      &-3 {
+        width: 218px;
+        height: 206px;
+        x: 891px;
+        y: 564px;
+        opacity: 0.5;
+      }
+    }
+
+    &__title {
+      font-family: "Gotham Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+      font-size: 30px;
+      line-height: 30px;
+      width: 370px;
+      height: 40px;
+      color: white;
+      x: 83px;
+      y: 112px;
+    }
+
+    &__content {
+      width: 756px;
+      height: 473px;
+      x: 160px;
+      y: 158px;
+    }
+  }
+
+  &__tab3 {
+    img {
+      height: 100%;
+    }
+
+    &__ice {
+      &-1 {
+        width: 39px;
+        height: 39px;
+        x: -5px;
+        y: 108px;
+        opacity: 0.5;
+      }
+
+      &-2 {
+        width: 235px;
+        height: 216px;
+        x: 146px;
+        y: 581px;
+        opacity: 0.5;
+      }
+
+      &-3 {
+        width: 107px;
+        height: 102px;
+        x: 936px;
+        y: 211px;
+        opacity: 0.5;
+      }
+    }
+
+    &__title {
+      font-family: "Gotham Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+      font-size: 30px;
+      line-height: 30px;
+      width: 370px;
+      height: 40px;
+      color: white;
+      x: 83px;
+      y: 112px;
+    }
+
+    &__content {
+      width: 910px;
+      height: 470px;
+      x: 52px;
+      y: 149px;
+    }
+  }
+}
