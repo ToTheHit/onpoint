@@ -22,7 +22,7 @@
     "slick-carousel": "^1.8.1",
     "smoothscroll-polyfill": "^0.4.4",
     "sugarss": "^2.0.0",
-    "webpack": "^4.42.1",
+    "webpack": "^4.44.1",
     "webpack-merge": "^4.1.4"
   },
   "scripts": {
