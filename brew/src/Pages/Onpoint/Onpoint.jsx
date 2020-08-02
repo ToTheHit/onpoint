@@ -1,12 +1,14 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, {
+  useCallback, useEffect, useMemo, useRef, useState,
+} from 'react';
 import './onpoint.css';
 
-import Section1 from "../../components/Onpoint/section1/Section1";
-import Section2 from "../../components/Onpoint/section2/Section2";
-import Section3 from "../../components/Onpoint/section3/Section3";
-import Pagination from "../../components/Onpoint/Global/pagination/Pagination";
+import Section1 from '../../components/Onpoint/section1/Section1';
+import Section2 from '../../components/Onpoint/section2/Section2';
+import Section3 from '../../components/Onpoint/section3/Section3';
+import Pagination from '../../components/Onpoint/Global/pagination/Pagination';
 import Background from '../../assets/onpoint/background.jpg';
-import useThrottle from "../../components/Onpoint/Global/useThrottle";
+import useThrottle from '../../components/Onpoint/Global/useThrottle';
 
 const Empty = () => {
   const containerRef = useRef(null);
@@ -25,23 +27,21 @@ const Empty = () => {
     containerRef.current.addEventListener('scroll', onScroll, { passive: false });
     return () => {
       containerRef.current.removeEventListener('scroll', onScroll, { passive: false });
-    }
+    };
   }, []);
 
-  const MemoContent = useMemo(() => {
-    return (
-      <Section1
-        slideIndex={slideIndex}
-      />
-    )
-  }, [slideIndex]);
+  const MemoContent = useMemo(() => (
+    <Section1
+      slideIndex={slideIndex}
+    />
+  ), [slideIndex]);
 
-  const MemoContent1 = useMemo(() => {
-    return (<>
+  const MemoContent1 = useMemo(() => (
+    <>
       <Section2 />
       <Section3 />
-    </>)
-  }, []);
+    </>
+  ), []);
 
   const onScroll = useCallback(() => {
     setScrollPosition(containerRef.current.scrollTop);
@@ -54,7 +54,6 @@ const Empty = () => {
         className="Onpoint wrapper"
         style={{ backgroundImage: `url(${Background})` }}
         ref={containerRef}
-        onClick={(e) => console.info(e.target)}
       >
         {MemoContent}
         {MemoContent1}
