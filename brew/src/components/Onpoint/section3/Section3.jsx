@@ -40,7 +40,6 @@ const Section3 = (props) => {
   }, [rID, fin]);
 
   const ani = useCallback((cf = 0) => {
-    // console.info(ini, fin);
     containerRef.current.style.setProperty('--i1', ini + (fin - ini) * cf / anf);
 
     if ((cf === anf) || (!ini && !fin && !anf)) {
@@ -56,7 +55,6 @@ const Section3 = (props) => {
   }, [ini, fin, anf]);
 
   const lock = useCallback((e) => {
-    console.info('lock', e.target);
     setX0(unify(e).clientX);
     setLocked(true);
   }, []);
@@ -66,10 +64,7 @@ const Section3 = (props) => {
     e.preventDefault();
 
     if (locked) {
-      console.info('drag');
-
       let dx = unify(e).clientX - x0, f = +(dx / w).toFixed(2);
-
       containerRef.current.style.setProperty('--i1', i - f)
     }
   }, [locked, x0, w, i]);
@@ -92,7 +87,6 @@ const Section3 = (props) => {
       }
       setFin(copyI);
       setAnf(Math.round(f * NF));
-      // ani();
       setX0(null);
       setLocked(false);
     }
@@ -105,24 +99,24 @@ const Section3 = (props) => {
   }, []);
 
   useEffect(() => {
- /*   containerRef.current.addEventListener('mousedown', lock, false);
-    containerRef.current.addEventListener('touchstart', lock, false);
-
-    containerRef.current.addEventListener('mousemove', drag, false);
-    containerRef.current.addEventListener('touchmove', drag, false);
-
-    containerRef.current.addEventListener('mouseup', move, false);
-    containerRef.current.addEventListener('touchend', move, false);*/
+    // containerRef.current.addEventListener('mousedown', lock, false);
+    // containerRef.current.addEventListener('touchstart', lock, false);
+    //
+    // containerRef.current.addEventListener('mousemove', drag, false);
+    // containerRef.current.addEventListener('touchmove', drag, false);
+    //
+    // containerRef.current.addEventListener('mouseup', move, false);
+    // containerRef.current.addEventListener('touchend', move, false);
 
     return () => {
-/*      containerRef.current.removeEventListener('mousedown', lock, false);
-      containerRef.current.removeEventListener('touchstart', lock, false);
-
-      containerRef.current.removeEventListener('mousemove', drag, false);
-      containerRef.current.removeEventListener('touchmove', drag, false);
-
-      containerRef.current.removeEventListener('mouseup', move, false);
-      containerRef.current.removeEventListener('touchend', move, false);*/
+      // containerRef.current.removeEventListener('mousedown', lock, false);
+      // containerRef.current.removeEventListener('touchstart', lock, false);
+      //
+      // containerRef.current.removeEventListener('mousemove', drag, false);
+      // containerRef.current.removeEventListener('touchmove', drag, false);
+      //
+      // containerRef.current.removeEventListener('mouseup', move, false);
+      // containerRef.current.removeEventListener('touchend', move, false);
     }
   }, [lock, drag, move]);
 
@@ -131,7 +125,6 @@ const Section3 = (props) => {
   }, []);
 
   const updateTab = useCallback((fin) => {
-    // setIni(0);
     setFin(fin);
     setAnf(15);
   }, []);
@@ -247,81 +240,8 @@ const Section3 = (props) => {
   return (
     <section
       className={'Section3'}
-
     >
       {content}
-      {/*      <div
-        className="Section3__item"
-      >
-        3
-      </div>*/}
-      {/*      <svg
-        width="100%"
-        height="100%"
-        viewBox="0 0 1024 768"
-        baseProfile='tiny'
-        x='0px'
-        y='0px'
-        ref={containerRef}
-      >
-        <image href={Background3}
-               x="0" y="0" width="100%" height="100%"
-               preserveAspectRatio="xMidYMid slice"
-        />
-        <g>
-          <foreignObject className={'Section3__tab1 Section3__tab1__ice-1'}>
-            <img src={Tab1Ice1} alt={'Ice'} />
-          </foreignObject>
-          <foreignObject className={'Section3__tab1 Section3__tab1__ice-2'}>
-            <img src={Tab1Ice2} alt={'Ice'} />
-          </foreignObject>
-          <foreignObject className={'Section3__tab1 Section3__tab1__ice-3'}>
-            <img src={Tab1Ice3} alt={'Ice'} />
-          </foreignObject>
-          <foreignObject className={'Section3__tab1 Section3__tab1__title'}>
-            <div>Звенья патогенеза СД2</div>
-          </foreignObject>
-          <foreignObject className={'Section3__tab1 Section3__tab1__content'}>
-            <img src={TabContent1} alt={'Ice'} />
-          </foreignObject>
-        </g>
-
-        <g>
-          <foreignObject className={'Section3__tab2 Section3__tab2__ice-1'}>
-            <img src={Tab2Ice1} alt={'Ice'} />
-          </foreignObject>
-          <foreignObject className={'Section3__tab2 Section3__tab2__ice-2'}>
-            <img src={Tab2Ice2} alt={'Ice'} />
-          </foreignObject>
-          <foreignObject className={'Section3__tab2 Section3__tab2__ice-3'}>
-            <img src={Tab2Ice3} alt={'Ice'} />
-          </foreignObject>
-          <foreignObject className={'Section3__tab2 Section3__tab2__title'}>
-            <div>Смертельный октет</div>
-          </foreignObject>
-          <foreignObject className={'Section3__tab2 Section3__tab2__content'}>
-            <img src={TabContent2} alt={'Ice'} />
-          </foreignObject>
-        </g>
-
-        <g>
-          <foreignObject className={'Section3__tab3 Section3__tab3__ice-1'}>
-            <img src={Tab3Ice1} alt={'Ice'} />
-          </foreignObject>
-          <foreignObject className={'Section3__tab3 Section3__tab3__ice-2'}>
-            <img src={Tab3Ice2} alt={'Ice'} />
-          </foreignObject>
-          <foreignObject className={'Section3__tab3 Section3__tab3__ice-3'}>
-            <img src={Tab3Ice3} alt={'Ice'} />
-          </foreignObject>
-          <foreignObject className={'Section3__tab3 Section3__tab3__title'}>
-            <div>Звенья патогенеза СД2</div>
-          </foreignObject>
-          <foreignObject className={'Section3__tab3 Section3__tab3__content'}>
-            <img src={TabContent3} alt={'Ice'} />
-          </foreignObject>
-        </g>
-      </svg>*/}
     </section>
   )
 };

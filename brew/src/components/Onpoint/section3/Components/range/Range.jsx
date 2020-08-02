@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Polygon from "../../../../../assets/onpoint/section3/Polygon.png";
 import classNames from "../../../../../lib/classNames";
 // import useDebounce from "./useDebounce";
-import useThrottle from './useThrottle'
+import useThrottle from '../../../Global/useThrottle'
 
 const Range = (props) => {
   const { updateTab } = props;

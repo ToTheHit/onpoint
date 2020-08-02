@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-d
 import './index.css';
 import Page404 from "./Pages/Page404/Page404";
 
-
 const App = lazy(() => import('./Pages/Main/App'))
 const Onpoint = lazy(() => import('./Pages/Onpoint/Onpoint'));
 
@@ -14,7 +13,7 @@ const ScrollToTop = () => {
 };
 
 const routes = [
-  // { path: '/', Component: '' },
+  // { path: '', Component: '' },
 ]
 
 class AppRouter extends Component {

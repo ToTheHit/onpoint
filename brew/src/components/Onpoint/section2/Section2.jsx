@@ -11,6 +11,7 @@ const Section2 = (props) => {
   return (
     <section className={'Section2'}>
       <svg
+        className={'Section2__content parallax'}
         width="100%"
         height="100%"
         viewBox="0 0 1024 768"
@@ -18,10 +19,6 @@ const Section2 = (props) => {
         x='0px'
         y='0px'
       >
-        <image href={Background2}
-               x="0" y="0" width="100%" height="100%"
-               preserveAspectRatio="xMidYMid slice"
-        />
         <foreignObject  className={'Section2__ice Section2__ice-1'}>
           <img src={Ice1} alt={'Ice'} />
         </foreignObject>
@@ -40,6 +37,21 @@ const Section2 = (props) => {
           </div>
         </foreignObject>
 
+      </svg>
+
+      <svg
+        className={'Section2__background'}
+        width="100%"
+        height="100%"
+        viewBox="0 0 1024 768"
+        baseProfile='tiny'
+        x='0px'
+        y='0px'
+      >
+        <image href={Background2}
+               x="0" y="0" width="100%" height="100%"
+               preserveAspectRatio="xMidYMid slice"
+        />
       </svg>
     </section>
   )

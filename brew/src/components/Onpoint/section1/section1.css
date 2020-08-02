@@ -1,3 +1,16 @@
+.Section1 {
+  z-index: 2;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+.Section1__hidden {
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
 .Section1__circle {
   color: rgba(247, 139, 31, 0.62);
   stroke: #cf1436;

@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import './section1.css';
 import Background from "../../../assets/onpoint/section1/background1.jpg";
 import BottomShadow from "../../../assets/onpoint/section1/bottomShadow.png";
 import Arrow from "../../../assets/onpoint/section1/arrow.svg";
+import classNames from "../../../lib/classNames";
 
 const Section1 = (props) => {
-  return (
-    <section className={'Section1'}>
+  const { slideIndex } = props;
+  const content = useMemo(() => {
+    return (<>
       <svg
         width="100%"
         height="100%"
@@ -159,13 +161,20 @@ const Section1 = (props) => {
         </g>
 
       </svg>
-      <img src={BottomShadow} className={'Section1__bottomShadow'} alt={'Bottom shadow'}/>
-      <div className="Section1__bottomText">Листайте вниз</div>
-      <Arrow className="Section1__bottomArrow" />
+    </>)
+  }, []);
+  return (
+    <section className={'Section1'}>
+      {content}
+      <img src={BottomShadow} className={classNames('Section1 Section1__bottomShadow', slideIndex !== 0 && 'Section1__hidden')} alt={'Bottom shadow'} />
+      <div className={classNames("Section1 Section1__bottomText", slideIndex !== 0 && 'Section1__hidden')}>Листайте вниз</div>
+      <Arrow className={classNames("Section1 Section1__bottomArrow", slideIndex !== 0 && 'Section1__hidden')} />
     </section>
   )
 };
 
-Section1.propTypes = {};
+Section1.propTypes = {
+  slideIndex: PropTypes.number.isRequired,
+};
 Section1.defaultProps = {};
 export default Section1;

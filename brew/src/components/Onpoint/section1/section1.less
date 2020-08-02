@@ -1,4 +1,12 @@
 .Section1 {
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.3s linear;
+
+  &__hidden {
+    opacity: 0;
+    user-select: none;
+  }
   &__circle {
     color: rgba(247, 139, 31, 0.62);
     stroke: #cf1436;
